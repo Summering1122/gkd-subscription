@@ -1,7 +1,7 @@
 {
   "id": 794613208,
   "name": "自动跳过规则补充",
-  "version": 324,
+  "version": 325,
   "globalGroups": [
     {
       "key": 3,
@@ -533,9 +533,9 @@
           ]
         },
         {
-          "key": 90,
-          "name": "返回/关闭控件",
-          "desc": "自动点击明确的返回与关闭按钮",
+          "key": 91,
+          "name": "返回首页按钮",
+          "desc": "自动点击 back_home_btn 返回按钮",
           "fastQuery": true,
           "actionCd": 1000,
           "order": -10,
@@ -551,16 +551,6 @@
               "key": 1,
               "action": "clickCenter",
               "matches": [
-                "[vid=\"btn_go_back\"]"
-              ],
-              "snapshotUrls": [
-                "https://i.gkd.li/i/35006782"
-              ]
-            },
-            {
-              "key": 2,
-              "action": "clickCenter",
-              "matches": [
                 "[vid=\"back_home_btn\"]"
               ],
               "snapshotUrls": [
@@ -568,9 +558,26 @@
                 "https://i.gkd.li/i/35006808",
                 "https://i.gkd.li/i/35006815"
               ]
-            },
+            }
+          ]
+        },
+        {
+          "key": 92,
+          "name": "通用返回按钮",
+          "desc": "自动点击明确的通用返回按钮",
+          "fastQuery": true,
+          "actionCd": 1000,
+          "order": -10,
+          "resetMatch": "match",
+          "activityIds": [
+            "com.taobao.search.uniform.SearchActivity",
+            "com.taobao.themis.container.app.TMSActivity",
+            "com.taobao.tao.welcome.Welcome",
+            "com.alibaba.android.ultron.vfw.weex2.highPerformance.widget.UltronTradeHybridActivity"
+          ],
+          "rules": [
             {
-              "key": 3,
+              "key": 1,
               "action": "clickCenter",
               "matches": [
                 "*[desc=\"返回\"][clickable=true][visibleToUser=true]"
@@ -1728,26 +1735,6 @@
           ],
           "rules": [
             {
-              "key": 1,
-              "action": "clickCenter",
-              "matches": [
-                "[vid=\"b22\"]"
-              ],
-              "snapshotUrls": [
-                "https://i.gkd.li/i/35006752"
-              ]
-            },
-            {
-              "key": 2,
-              "action": "clickCenter",
-              "matches": [
-                "[desc=\"关闭浮层活动\"]"
-              ],
-              "snapshotUrls": [
-                "https://i.gkd.li/i/35006752"
-              ]
-            },
-            {
               "key": 3,
               "action": "clickCenter",
               "matches": [
@@ -2822,7 +2809,7 @@
               "key": 1,
               "action": "clickCenter",
               "matches": [
-                "[vid=\"compass_tab_back_btn\"]"
+                "[text*=\"看视频再得\"] < View -7 TextView"
               ],
               "snapshotUrls": [
                 "https://i.gkd.li/i/35006698"
@@ -2915,36 +2902,6 @@
               ],
               "snapshotUrls": [
                 "https://i.gkd.li/i/35006742"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "com.hihonor.baidu.browser",
-      "name": "浏览器",
-      "groups": [
-        {
-          "key": 1,
-          "name": "返回按钮",
-          "desc": "自动点击返回按钮",
-          "fastQuery": true,
-          "actionCd": 1000,
-          "order": -10,
-          "resetMatch": "match",
-          "activityIds": [
-            "com.baidu.browser.search.LightSearchActivity"
-          ],
-          "rules": [
-            {
-              "key": 1,
-              "action": "clickCenter",
-              "matches": [
-                "*[desc=\"返回\"][clickable=true][visibleToUser=true]"
-              ],
-              "snapshotUrls": [
-                "https://i.gkd.li/i/35006728"
               ]
             }
           ]
