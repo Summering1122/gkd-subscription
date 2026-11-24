@@ -1,7 +1,7 @@
 {
   "id": 794613208,
   "name": "自动跳过规则补充",
-  "version": 325,
+  "version": 326,
   "globalGroups": [
     {
       "key": 3,
@@ -46,6 +46,41 @@
               ],
               "snapshotUrls": [
                 "https://i.gkd.li/i/25483423"
+              ]
+            }
+          ]
+        },
+        {
+          "key": 4,
+          "name": "开屏广告",
+          "desc": "自动跳过开屏广告",
+          "fastQuery": true,
+          "actionCd": 1000,
+          "order": -10,
+          "matchTime": 8000,
+          "resetMatch": "app",
+          "activityIds": [
+            "com.chaozh.iReader.ui.activity.ShowAdActivity"
+          ],
+          "rules": [
+            {
+              "key": 1,
+              "action": "clickCenter",
+              "matches": [
+                "TextView[text=\"跳过\"]"
+              ],
+              "snapshotUrls": [
+                "https://i.gkd.li/i/35331057"
+              ]
+            },
+            {
+              "key": 2,
+              "action": "clickCenter",
+              "matches": [
+                "View[clickable=true][width=140][height=140]"
+              ],
+              "snapshotUrls": [
+                "https://i.gkd.li/i/35331065"
               ]
             }
           ]
@@ -1475,11 +1510,12 @@
             {
               "key": 4,
               "matches": [
-                "*[text=\"关闭\"][width=105]"
+                "ImageView[width=101][height=101][clickable=true]"
               ],
               "snapshotUrls": [
-                "https://i.gkd.li/i/30849997"
-              ]
+                "https://i.gkd.li/i/35331108"
+              ],
+              "action": "clickCenter"
             }
           ]
         },
@@ -2903,6 +2939,17 @@
               "snapshotUrls": [
                 "https://i.gkd.li/i/35006742"
               ]
+            },
+            {
+              "key": 2,
+              "action": "clickCenter",
+              "matches": [
+                "[vid=\"anythink_myoffer_splash_skip\"]"
+              ],
+              "snapshotUrls": [
+                "https://i.gkd.li/i/35331081",
+                "https://i.gkd.li/i/35331093"
+              ]
             }
           ]
         }
@@ -2942,6 +2989,30 @@
               ],
               "snapshotUrls": [
                 "https://i.gkd.li/i/35006702"
+              ]
+            }
+          ]
+        },
+        {
+          "key": 2,
+          "name": "跳过暂停页",
+          "desc": "自动关闭暂停页广告",
+          "fastQuery": true,
+          "actionCd": 1000,
+          "order": -10,
+          "resetMatch": "match",
+          "activityIds": [
+            "com.bilibili.ship.theseus.playlist.UnitedPlaylistActivity"
+          ],
+          "rules": [
+            {
+              "key": 1,
+              "action": "clickCenter",
+              "matches": [
+                "*[desc=\"关闭暂停页\"][visibleToUser=true]"
+              ],
+              "snapshotUrls": [
+                "https://i.gkd.li/i/35331102"
               ]
             }
           ]
